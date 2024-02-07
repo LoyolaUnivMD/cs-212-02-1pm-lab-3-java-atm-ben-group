@@ -6,7 +6,7 @@
 // Data In:
 // Data Out:
 // Credits: [Is your code based on an example in the book, in class, or something else?
-// Reminder: you should never take code from the Internet or another person
+//            Reminder: you should never take code from the Internet or another person
 
 import java.util.Scanner;
 
@@ -18,6 +18,12 @@ class Lab3 {
 
         System.out.println("Welcome, " + name + ". Would you like to deposit (enter 'd'), withdraw (enter 'w'), check your balance (enter 'c'), or exit (enter 'e')");
         String choice = scanner.nextLine();
+
+        if(choice.equals("D")){
+            System.out.println("How much would you like to deposit? ");
+            double deposit = Double.parseDouble(scan.nextLine());
+            balance += deposit;
+        }
 
     }
 }
