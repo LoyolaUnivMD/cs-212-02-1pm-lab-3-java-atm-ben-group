@@ -12,6 +12,9 @@ import java.util.Scanner;
 
 class Lab3 {
     public static void main(String[] args) {
+
+        double balance = 212.90;
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the bank, please enter your name: ");
         String name = scanner.nextLine();
@@ -21,7 +24,7 @@ class Lab3 {
 
         if(choice.equals("D")){
             System.out.println("How much would you like to deposit? ");
-            double deposit = Double.parseDouble(scan.nextLine());
+            double deposit = Double.parseDouble(scanner.nextLine());
             balance += deposit;
         }
 
