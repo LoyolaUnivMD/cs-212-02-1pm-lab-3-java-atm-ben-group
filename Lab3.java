@@ -9,12 +9,12 @@
 //            Reminder: you should never take code from the Internet or another person
 
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 class Lab3 {
     public static void main(String[] args) {
 
         double balance = 212.90;
-
+        DecimalFormat df = new DecimalFormat("");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the bank, please enter your name: ");
         String name = scanner.nextLine();
@@ -22,10 +22,14 @@ class Lab3 {
         System.out.println("Welcome, " + name + ". Would you like to deposit (enter 'd'), withdraw (enter 'w'), check your balance (enter 'c'), or exit (enter 'e')");
         String choice = scanner.nextLine();
 
-        if(choice.equals("D")){
+        if(choice.equals("d")){
             System.out.println("How much would you like to deposit? ");
             double deposit = Double.parseDouble(scanner.nextLine());
             balance += deposit;
+        }
+
+        else if(choice.equals("c")){
+            System.out.println(name + "has a current balance of $" + df.format(balance));
         }
 
     }
