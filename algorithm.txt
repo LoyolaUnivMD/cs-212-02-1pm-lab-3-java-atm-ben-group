@@ -1,19 +1,22 @@
-When a user first accesses the ATM, the user should be asked for their name.
-The ATM should greet the user by name with a greeting message, then ask the user what they would like to do.
-If a user selects deposit
-The ATM should increase the user's balance by the provided amount
-Otherwise, if a user selects withdraw
-The ATM should reduce the balance by the users provided amount if and only if there are sufficients funds.
-Otherwise, if the user selects check balance
-The ATM should display the current balance
-Otherwise, if the user selects leave
-The ATM should ask if the user would like a receipt printed or emailed.
-The ATM should display the total amount deposited/withdrawn and a thank you message.
-The ATM should remind them to take the recipe or check their email depending on the option above.
-If the user has not chosen to leave:
-The ATM should return to the main menu and process starting from step 3.
-EXTRA CREDIT: Proper error checking should be included:
-The user should not be able to select invalid menu options.
-The user should not be able to enter negative numbers for deposits or withdrawls.
-The program should not crash if the user enters something that is not a number.
-The initial balance for the user is $212.90
+new DecimalFormat object df for USD$
+new Scanner object scanner
+When a user first accesses the ATM, the user is asked for their name.
+choice is initialized blank
+while choice does not equal "e"
+    The ATM greets the user by name with a greeting message, then ask the user what they would like to do and the input is scanned to choice
+    while choice is not "e", "d", "w", or "c"
+        Ask for the user to enter a valid letter
+    If a user selects deposit
+        The user is asked for the amount to deposit and it is error checked as a double and greater than zero
+        The ATM increases the user's balance by the provided amount
+    Otherwise, if a user selects withdraw
+        The user is asked for the amount to withdraw and it is error checked as a double and greater than zero
+        The ATM should reduce the balance by the users provided amount if there are sufficient funds.
+    Otherwise, if the user selects check balance
+        The ATM displays the current balance
+Ask if the user would like a receipt printed or emailed.
+Error check for valid input
+Display the total amount deposited/withdrawn and a thank you message.
+Remind user to take the recipe or check their email depending on the option above.
+
+
