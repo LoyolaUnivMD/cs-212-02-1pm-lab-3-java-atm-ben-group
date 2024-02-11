@@ -1,12 +1,11 @@
-// Programmers:  [your names here]
+// Programmers:  Brendan and Ben
 // Course:  CS 212
-// Due Date:
-// Lab Assignment:
-// Problem Statement:
-// Data In:
-// Data Out:
-// Credits: [Is your code based on an example in the book, in class, or something else?
-//            Reminder: you should never take code from the Internet or another person
+// Due Date: 2/11/24
+// Lab Assignment: 3
+// Problem Statement: Create a program to function as an ATM which can deposit, withdraw, and check your balance
+// Data In: User's name, choice of ATM function, amount to withdraw/deposit, type of receipt
+// Data Out: Asking user for their choice, balance, receipt
+// Credits: N/A
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
