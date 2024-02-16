@@ -22,8 +22,8 @@ class Lab3 {
         String name = scanner.nextLine();
 
         String choice = "";
-        Double allDeposits = 0.0;
-        Double allWithdraws = 0.0;
+        double allDeposits = 0.0;
+        double allWithdraws = 0.0;
         while (!choice.equals("e")) {
             System.out.println("Welcome, " + name + ". Would you like to deposit (enter 'd'), withdraw (enter 'w'), check your balance (enter 'c'), or exit (enter 'e')");
             choice = scanner.nextLine().toLowerCase();
@@ -85,34 +85,6 @@ class Lab3 {
                 balance -= withdraw;
             } else if (choice.equals("c")) {
                 System.out.println(name + " has a current balance of " + df.format(balance));
-            } else if (choice.equals("e")) {
-                System.out.println("Would you like your receipt emailed or printed? (enter 'e' for email or 'p' for printed) ");
-                String receiptChoice = scanner.nextLine();
-
-                if(receiptChoice.equals("e"))
-                {
-                    if(balance > 212.90) {
-                        System.out.println("You have deposited " + df.format((balance - 212.90)));
-                    }
-                    else if(balance < 212.90) {
-                        System.out.println("You have withdrawn " + df.format((212.90 - balance)));
-                    }
-                    else {
-                        System.out.println("There is no change to your balance.");
-                    }
-                    System.out.println("Make sure to check your email for your receipt. Thanks for banking with us!");
-                } else {
-                    if(balance > 212.90) {
-                        System.out.println("You have deposited " + df.format((balance - 212.90)));
-                    }
-                    else if(balance < 212.90) {
-                        System.out.println("You have withdrawn " + df.format((212.90 - balance)));
-                    }
-                    else {
-                        System.out.println("There is no change to your balance.");
-                    }
-                    System.out.println("Make sure to take your receipt. Thank you for banking with us!");
-                }
             }
         }
         System.out.println("Would you like a receipt printed or emailed? Enter 'print' or 'email' ");
